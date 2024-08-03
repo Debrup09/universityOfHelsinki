@@ -1,3 +1,8 @@
+/* Check whether the age is possible
+Expected Output:
+How old are you? 150
+Impossible!
+ */
 
 import java.util.Scanner;
 
@@ -6,5 +11,13 @@ public class CheckingTheAge {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("How old are you?");
+        int age = scan.nextInt();
+
+        if (age < 0 || age > 120) {
+            System.out.println("Impossible");
+        }   else {
+            System.out.println("OK");
+        }
     }
 }

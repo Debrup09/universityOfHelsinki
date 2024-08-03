@@ -1,3 +1,11 @@
+/* Check if the strings are same or not
+Expected Output:
+Enter the first string:
+hello
+Enter the second string:
+hello
+Same
+ */
 
 import java.util.Scanner;
 
@@ -6,6 +14,15 @@ public class Same {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Write your program here. 
+        System.out.println("Enter the first string: ");
+        String first = scan.nextLine();
+        System.out.println("Enter the second string: ");
+        String second = scan.nextLine();
+
+        if (first.equals(second)) {
+            System.out.println("Same");
+        }   else {
+            System.out.println("Different");
+        }
     }
 }
