@@ -2,21 +2,20 @@
 import java.util.Scanner;
 
 public class Factorial {
-
-    public static void main(String[] args) {
-    int first = 5;
-    int second = 10;
-    
-    beginningToMiddle(first, second);
-
-    System.out.println(first);
-}
-
-public static void beginningToMiddle (int start, int end) {
-    int middle = (start + end)/2;
-    while (start < middle) {
-        System.out.println("step");
-        start++;
+    public static int fact(int num) {
+        int fact = 1;
+        for (int i=2; i<=num; i++) {
+            fact*= i;
+        }
+        return fact;
     }
-}
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Give a number: ");
+        int num = sc.nextInt();
+        
+        int fact = fact(num);
+        System.out.println("Factorial: " + fact);
+    }
 }
